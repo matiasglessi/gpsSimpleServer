@@ -1,6 +1,6 @@
 CREATE TABLE user(
-	`id` int(11) NOT NULL AUTO_INCREMENT,
-	username varchar(255) NOT NULL UNIQUE,
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    username varchar(255) NOT NULL UNIQUE,
     pass varchar(255) NOT NULL,
     email varchar(255) UNIQUE NOT NULL,
     first_name varchar(255) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE user(
 );
 
 CREATE TABLE gpsPoints(
-	user_id int(11) NOT NULL,
+    user_id int(11) NOT NULL,
     latitude Decimal(9,6) NOT NULL,
     longitude Decimal(9,6) NOT NULL, 
     gps_time timestamp NOT NULL,
