@@ -14,3 +14,24 @@ def save_user(user):
     cursor.execute(add_person, data)
     cnx.commit()
     cursor.close()
+
+
+def get_user(user_id):
+    cnx = connector.connect()
+    cursor = cnx.cursor()
+    get_person = ("SELECT * FROM user "
+                  "WHERE  id = %s ")
+
+    cursor.execute(get_person, user_id)
+    result = cursor.fetchone()
+    print(result)
+    return result
+
+def get_all_users():
+    cnx = connector.connect()
+    cursor = cnx.cursor()
+    get_all = "SELECT * FROM user"
+    cursor.execute(get_all)
+    result = cursor.fetchall()
+    print(result)
+    return result
