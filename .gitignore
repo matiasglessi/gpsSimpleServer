@@ -1,0 +1,5 @@
+.idea/
+*.pyc
+.pydevproject
+.project
+__pycache__/
