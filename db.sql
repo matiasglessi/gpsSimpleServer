@@ -5,7 +5,6 @@ CREATE TABLE user(
     email varchar(255) UNIQUE NOT NULL,
     first_name varchar(255) NOT NULL,
     last_name varchar(255) NOT NULL,
-    date_of_birth timestamp NOT NULL,
     PRIMARY KEY (`id`)
 );
 
