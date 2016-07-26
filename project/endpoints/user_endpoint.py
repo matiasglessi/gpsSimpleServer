@@ -12,8 +12,8 @@ USER_ENDPOINT = Blueprint(
 def save_user():
     json_data = request.json
     verify_json(
-        json_data, ('username', 'pass', 'email', 'first_name', 'last_name'))
-    user_service.save_user(json_data['username'], json_data['pass'], json_data['email'], json_data['first_name'],
+        json_data, ('username', 'password', 'email', 'first_name', 'last_name'))
+    user_service.save_user(json_data['username'], json_data['password'], json_data['email'], json_data['first_name'],
                            json_data['last_name'])
     json = jsonify({"Succeed": True})
     return json

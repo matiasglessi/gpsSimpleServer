@@ -7,7 +7,7 @@ class SqlConnection:
 
     @staticmethod
     def connect():
-        return pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='mysql')
+        return pymysql.connect(host='localhost', port=3306, user='root', passwd='root', db='gps')
 
     def consult(self, query, params=None):
         conn = self.connect()
