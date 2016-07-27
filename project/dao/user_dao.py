@@ -27,6 +27,7 @@ def get_user(user_id):
     print(result)
     return result
 
+
 def get_all_users():
     cnx = connector.connect()
     cursor = cnx.cursor()
